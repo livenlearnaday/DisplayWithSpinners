@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_site_data">
+
+
+    <action
+        android:id="@+id/action_global_fragment_site_data"
+        app:destination="@id/fragment_site_data"
+        app:popUpTo="@+id/fragment_site_data"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/action_global_fragment_custom_units"
+        app:destination="@id/fragment_custom_units"
+        app:popUpTo="@+id/fragment_custom_units"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/action_global_fragment_add_custom_unit"
+        app:destination="@id/fragment_add_custom_unit"
+        app:popUpTo="@+id/fragment_add_custom_unit"
+        app:popUpToInclusive="true" />
+
+
+    <fragment
+        android:id="@+id/fragment_site_data"
+        android:name="io.github.livenlearnaday.displaywithspinners.view.SiteDataFragment">
+        <action
+            android:id="@+id/action_fragment_site_data_to_fragment_custom_unit"
+            app:destination="@id/fragment_custom_units"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/fragment_custom_units"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_custom_units"
+        android:name="io.github.livenlearnaday.displaywithspinners.view.CustomUnitsFragment">
+        <action
+            android:id="@+id/action_fragment_custom_units_to_fragment_site_data"
+            app:destination="@id/fragment_site_data"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/fragment_site_data"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/fragment_add_custom_unit"
+        android:name="io.github.livenlearnaday.displaywithspinners.view.CustomUnitsAddFragment">
+        <action
+            android:id="@+id/action_fragment_add_custom_unit_to_fragment_custom_units"
+            app:destination="@id/fragment_custom_units"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/fragment_custom_units"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+
+
+
+
+
+
+</navigation>

@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ToolBarColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--Removing actionbar-->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="titleEnabled">false</item>
+    </style>
+
+    <!--    toolbar theme-->
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents">
+        <!--Rbackground color of actionbar pop up when click on menu icon-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+
+
+
+    <!--    add units-->
+    <style name="add_items" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">@dimen/dimen_5dp</item>
+        <item name="android:drawableTop">@drawable/ic_baseline_add_24</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textsize_11sp</item>
+        <item name="android:layout_marginRight">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_1dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+    </style>
+
+
+
+
+
+    <!--    spinner units display -->
+    <style name="spinner_units" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textsize_11sp</item>
+        <item name="android:background">#EAEFEF</item>
+        <item name="android:layout_marginRight">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_1dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+    </style>
+
+
+
+    <!--    table header-->
+    <style name="table_header" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textsize_11sp</item>
+        <item name="android:background">#00ACC1</item>
+        <item name="android:layout_marginRight">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_1dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+    </style>
+
+
+
+
+
+<!--    table row-->
+    <style name="table_row_item" parent="@android:style/TextAppearance.Small">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#464545</item>
+        <item name="android:textSize">@dimen/textsize_10sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginRight">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_1dp</item>
+        <item name="android:paddingStart">@dimen/dimen_10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_10dp</item>
+<!--        <item name="android:layout_height">@dimen/_30sdp</item>-->
+    </style>
+
+    <!--    bottom bar country detail theme-->
+    <style name="BottomBarTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="backgroundColor">@color/BottomBarColor</item>
+        <item name="android:state_selected">@color/BottomBarSelectedColor</item>
+        <item name="colorPrimary">@color/BottomBarColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/BottomBarSelectedColor</item>
+    </style>
+
+</resources>

@@ -1,0 +1,176 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "io.github.livenlearnaday.displaywithspinners"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(11))
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/*'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    implementation "androidx.annotation:annotation:$annotationVersion"
+    implementation "androidx.multidex:multidex:$multidexVersion"
+
+    //kotlin
+    implementation "androidx.core:core-ktx:$androidxCoreKtxVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$rootProject.kotlin_version"
+
+    //lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewmodel"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleLivedata"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleCommon"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntime"
+
+
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    implementation "com.google.android.material:material:$androidMaterialVersion"
+    implementation "androidx.activity:activity-ktx:$activityKtxVersion"
+
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    //Timber logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // database
+    implementation "androidx.room:room-rxjava2:$roomDatabase"
+    implementation "androidx.room:room-runtime:$roomDatabase"
+    implementation "androidx.room:room-ktx:$roomDatabase"
+    kapt "androidx.room:room-compiler:$roomDatabase"
+
+
+    //testing
+
+    implementation "androidx.arch.core:core-testing:$coreTestingVersion"
+    testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
+
+    androidTestImplementation "androidx.test.ext:junit-ktx:$androidXJunitVersion"
+    androidTestImplementation "org.assertj:assertj-core:$assertjVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidXJunitVersion"
+
+    testImplementation "junit:junit:$junitTestingVersion"
+
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentTestingVersion"
+
+
+    androidTestImplementation("org.mockito:mockito-android:3.3.3") {
+        exclude group: "net.bytebuddy", module: "byte-buddy-android"
+    }
+    androidTestImplementation "net.bytebuddy:byte-buddy-android:1.10.9"
+
+    testImplementation 'org.mockito:mockito-inline:2.8.47'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-RC3'
+
+
+    //Expresso
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+    implementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoIntentsVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroidVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutinesVersion"
+
+    //coroutines testing
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+
+
+    // gson
+    implementation "com.google.code.gson:gson:$gsonGoogleVersion"
+
+
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltAndroidVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltAndroidCompilerVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
+
+
+    //Hilt Testing
+    // For Robolectric tests
+    testImplementation "com.google.dagger:hilt-android-testing:$hiltAndroidVersion"
+    // hilt testing
+    kaptTest "com.google.dagger:hilt-android-compiler:$hiltAndroidVersion"
+    // For instrumented tests
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltAndroidVersion"
+    // hilt testing
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltAndroidVersion"
+
+
+
+
+// retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$gsonRetrofitVersion"
+    implementation "com.google.code.gson:gson:$gsonGoogleVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpInterceptorVersion"
+
+
+}
+
+kapt {
+    correctErrorTypes true
+}

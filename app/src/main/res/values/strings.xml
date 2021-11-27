@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">DisplayWithSpinners</string>
+    <string name="title_system">System</string>
+    <string name="site_name">Name</string>
+    <string name="title_area">Surface Area</string>
+    <string name="title_density">Average Soil Density</string>
+    <string name="title_rate">Average Infiltration Rate</string>
+    <string name="title_length">Average Monthly Rainfall</string>
+    <string name="reset">Reset to default display</string>
+
+
+    <!--    Fragment -->
+    <string name="title_home">Home</string>
+    <string name="custom_unit_title">Custom Unit</string>
+    <string name="add_new_unit_title">Add New Unit</string>
+    <string name="setting">Setting</string>
+
+
+    <!--Unit Category-->
+    <string name="area_category">Area</string>
+    <string name="density_category">Density</string>
+    <string name="rate_category">Rate</string>
+    <string name="length_category">Length</string>
+
+
+    <!--Custom Unit-->
+    <string name="add_new_custom_unit">Add</string>
+    <string name="new_measurement_system">New Measurement System</string>
+    <string name="add">Add</string>
+    <string name="custom_unit">Custom Unit</string>
+    <string name="add_new_unit">Add New Unit</string>
+    <string name="add_new_system">Add System</string>
+    <string name="add_new_system_error">Please add a system measurement before selecting this button.</string>
+    <string name="add_new_system_duplicate_error">This measurement system already exists. Please select it from the drop down list.</string>
+    <string name="conversion_factor_input_error">Invalid conversion factor. Please input the factor again e.g 2.5</string>
+    <string name="unit_name_input_error">Invalid unit name. Please input the name again e.g sq. m</string>
+    <string name="edit">Edit unit</string>
+    <string name="delete">Delete unit</string>
+    <string name="preview">Preview</string>
+    <string name="unit_base">Base Unit</string>
+    <string name="unit_system">Measurement System</string>
+    <string name="unit_category">Unit Category</string>
+    <string name="unit_name">Unit Name</string>
+    <string name="unit_convert_factor">Unit Conversion Factor</string>
+    <string name="unit_convert_factor_default">1.0</string>
+    <string name="unit_base_system">Base System</string>
+    <string name="reset_custom_units">Reset units</string>
+    <string name="warning_message_reset_units">Do you want to delete all data which includes the custom units added and reload units data from the internet?</string>
+    <string name="title_custom_unit_system">System:</string>
+    <string name="title_custom_unit_name">Name:</string>
+    <string name="title_custom_unit_category">Category:</string>
+
+
+</resources>

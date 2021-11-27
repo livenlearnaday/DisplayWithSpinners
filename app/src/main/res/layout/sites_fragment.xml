@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SiteDataFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_measurement_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/ll_unit_spinners"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title_main_site"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:text="@string/title_system"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14sp" />
+
+
+            <Spinner
+                android:id="@+id/spinner_measurement_system"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="match_parent"
+                android:dropDownVerticalOffset="@dimen/dimen_20dp"
+                android:textSize="@dimen/textsize_14sp"
+                android:popupBackground="@color/LightGrey" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/setting"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/DarkBlue"
+            app:layout_constraintBottom_toTopOf="@id/ll_unit_spinners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_settings_24"
+            app:tint="@android:color/white"
+            app:useCompatPadding="true" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_unit_spinners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toTopOf="@id/table_heading_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_measurement_system">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/area_category"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/textsize_12sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_unit_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="@dimen/dimen_20dp"
+                    android:popupBackground="@color/LightGrey"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate_category"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/textsize_12sp" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_unit_density"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="@dimen/dimen_20dp"
+                    android:popupBackground="@color/LightGrey"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/density_category"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/textsize_12sp" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_unit_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="@dimen/dimen_20dp"
+                    android:popupBackground="@color/LightGrey"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/length_category"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/textsize_12sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_unit_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="@dimen/dimen_20dp"
+                    android:popupBackground="@color/LightGrey"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TableLayout
+            android:id="@+id/table_heading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_unit_spinners">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_header_site_name"
+                    style="@style/table_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/site_name"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_header_area"
+                    style="@style/table_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    android:text="@string/title_area"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_header_density"
+                    style="@style/table_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    android:text="@string/title_density"
+                    android:textAlignment="center" />
+
+
+                <TextView
+                    android:id="@+id/tv_header_rate"
+                    style="@style/table_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    android:text="@string/title_rate"
+                    android:textAlignment="center" />
+
+
+                <TextView
+                    android:id="@+id/tv_header_length"
+                    style="@style/table_header"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    android:text="@string/title_length"
+                    android:textAlignment="center" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sites"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            app:layout_constrainedHeight="true"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/table_heading_layout" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
